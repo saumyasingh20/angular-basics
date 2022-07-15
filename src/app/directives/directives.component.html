@@ -1,0 +1,27 @@
+<h1>Directives in TypeScript</h1>
+
+<h2>Demo of ngFor</h2>
+<ul>
+    <li *ngFor = "let emp of employees"> 
+    Employee Code: {{emp.code}} 
+    Name:{{emp.name}}
+    Dept:{{emp.dept}}
+
+    </li>
+</ul>
+
+<h2>Demo of ngIf</h2>
+<ul>
+    <li *ngFor = "let emp of employees"> 
+    Employee Code: {{emp.code}} 
+    Name:{{emp.name}}
+    Dept:{{emp.dept}}
+        <ul *ngIf="showAddress">
+            <li>Address : {{emp.address.city}}</li>
+
+        </ul>
+
+    </li>
+</ul>
+
+
