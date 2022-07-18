@@ -1,0 +1,17 @@
+<h1>Users</h1>
+<ul *ngIf = "loaded && users.length>0">
+    <li *ngFor="let user of users">
+        
+        <h1>Hi {{user.firstName}}  {{user.lastName}}</h1>
+        <ul *ngIf = "showExtended && user.address.street.length>0">
+            <li>
+                How is the weather in <b> {{user.address.street}}  </b>??
+            </li>
+        </ul>
+
+      
+    </li>
+</ul>
+
+<h4 *ngIf="users.length == 0">No Users Found</h4>
+<h4 *ngIf="!loaded">Loading Users...</h4>
