@@ -13,6 +13,10 @@ import { DirectivesComponent } from './directives/directives.component';
 import { UsersComponent } from './components/users/users.component';
 import {NgswitchdemoComponent} from './components/ngswitchdemo/ngswitchdemo.component';
 import { DatabindingdemoComponent } from './components/databindingdemo/databindingdemo.component';
+import { NgstylenclassdemoComponent } from './components/ngstyledemo/ngstyledemo.component';
+
+import { NgclassdemoComponent } from './components/ngclassdemo/ngclassdemo.component';
+import { ProductmasterComponent } from './components/productmaster/productmaster.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,10 @@ import { DatabindingdemoComponent } from './components/databindingdemo/databindi
     DirectivesComponent,
     UsersComponent,
     NgswitchdemoComponent,
-    DatabindingdemoComponent
+    DatabindingdemoComponent,
+    NgstylenclassdemoComponent,
+    NgclassdemoComponent,
+    ProductmasterComponent
   ],
   imports: [
     BrowserModule,
