@@ -18,6 +18,7 @@ export class ProductmasterComponent implements OnInit {
   products:Product[]=[];
    
   isUpdateVisible:boolean=false;
+  isAddVisible:boolean=true;
 
   constructor() { }
 
@@ -62,6 +63,7 @@ export class ProductmasterComponent implements OnInit {
               this.prod.price=prod.price;
            }
     }
+    this.isAddVisible=false;
     this.isUpdateVisible=true;
     
     
@@ -78,6 +80,7 @@ export class ProductmasterComponent implements OnInit {
     });
     this.isUpdateVisible=false;
     this.clearData();
+    this.isAddVisible=true;
   }
 
 

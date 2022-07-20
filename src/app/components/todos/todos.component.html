@@ -1,0 +1,27 @@
+<div class="jumbotron">
+    <h1 class="display-2 text-center">To Dos</h1>
+    <h2 class="display-3 text-center">List of ToDos</h2>
+</div>
+
+<table class="table">
+    <tr>
+        <th> User ID </th>
+        <th>Task ID</th>
+        <th>Task</th>
+        <th>Done</th>
+    </tr>
+    <tr *ngFor="let todo of todos">
+        <td>
+            {{todo.userId}}
+        </td>
+        <td>
+            {{todo.id}}
+        </td>
+        <td>
+            {{todo.title}}
+        </td>
+        <td>
+            {{todo.completed ? 'Yes':'No'}}
+        </td>
+    </tr>
+</table>

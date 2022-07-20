@@ -5,8 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
-//;
+import { TodoService } from './services/todo.service';
 import { UserComponent } from './components/user/user.component';
 import { DatatypesComponent } from './datatypes/datatypes.component';
 import { DirectivesComponent } from './directives/directives.component';
@@ -17,6 +18,7 @@ import { NgstylenclassdemoComponent } from './components/ngstyledemo/ngstyledemo
 
 import { NgclassdemoComponent } from './components/ngclassdemo/ngclassdemo.component';
 import { ProductmasterComponent } from './components/productmaster/productmaster.component';
+import { TodosComponent } from './components/todos/todos.component';
 
 @NgModule({
   declarations: [
@@ -29,14 +31,16 @@ import { ProductmasterComponent } from './components/productmaster/productmaster
     DatabindingdemoComponent,
     NgstylenclassdemoComponent,
     NgclassdemoComponent,
-    ProductmasterComponent
+    ProductmasterComponent,
+    TodosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
