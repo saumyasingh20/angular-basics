@@ -19,6 +19,7 @@ import { NgstylenclassdemoComponent } from './components/ngstyledemo/ngstyledemo
 import { NgclassdemoComponent } from './components/ngclassdemo/ngclassdemo.component';
 import { ProductmasterComponent } from './components/productmaster/productmaster.component';
 import { TodosComponent } from './components/todos/todos.component';
+import { TemplateFormComponent } from './components/template-form/template-form.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { TodosComponent } from './components/todos/todos.component';
     NgstylenclassdemoComponent,
     NgclassdemoComponent,
     ProductmasterComponent,
-    TodosComponent
+    TodosComponent,
+    TemplateFormComponent
   ],
   imports: [
     BrowserModule,

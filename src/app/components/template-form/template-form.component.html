@@ -1,0 +1,54 @@
+<div class="jumbotron">
+    <h1 class="display-3 text-center">Template Driven Form</h1>
+</div>
+<div class="container d-flex align-items-center flex-column justify-content-center h-100">
+    <form class="form-horizontal" #regUserForm="ngForm" (ngSubmit)="UserRegistration(regUserForm)">
+
+    <div>
+        {{validationMessage}}
+    </div>   
+
+        <div class="form-row">
+            <div class="col">
+              <label class="col mt-3" for="firstname">First Name</label>
+            </div>
+            <div class="col">
+                 <input type="text" name="firstname" id="firstname" class="form-control mt-3" placeholder="John" ngModel required
+                 #firstNameControl="ngModel"
+                 [ngClass]="[(firstNameControl.touched && !firstNameControl.valid)?'form-invalid':'']"
+                 [ngClass]="[(firstNameControl.valid)?'form-valid':'']"
+                 > 
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col">
+              <label class="col mt-3" for="lastname">Last Name</label>
+            </div>
+            <div class="col">
+                 <input type="text" name="lastname" id="lastname" class="form-control mt-3" placeholder="Doe" ngModel required> 
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col">
+              <label class="col mt-3" for="email">Email</label>
+            </div>
+            <div class="col">
+                 <input type="email" name="email" id="email" class="form-control mt-3" placeholder="johndoe@abc.com" ngModel required  #validateEmail="ngModel"> 
+                 <span *ngIf="validateEmail.touched && !validateEmail.valid">EmailID is Required</span>
+            </div>
+        </div>
+        <div class="form-row">
+
+            <div class="col mt-4">
+
+                <button class="btn btn-dark btn-outline btn-sm btn-block" type="submit" [disabled]="!regUserForm.valid"> Register </button>
+
+            </div>
+        </div>
+
+
+
+    </form>
+</div>
