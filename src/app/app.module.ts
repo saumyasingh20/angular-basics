@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { TodoService } from './services/todo.service';
@@ -20,6 +21,11 @@ import { NgclassdemoComponent } from './components/ngclassdemo/ngclassdemo.compo
 import { ProductmasterComponent } from './components/productmaster/productmaster.component';
 import { TodosComponent } from './components/todos/todos.component';
 import { TemplateFormComponent } from './components/template-form/template-form.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { ParentOneComponent } from './components/parent-one/parent-one.component';
+import { ChildOneComponent } from './components/child-one/child-one.component';
+import { ParenttwoComponent } from './components/parenttwo/parenttwo.component';
+import { ChildtwoComponent } from './components/childtwo/childtwo.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +40,19 @@ import { TemplateFormComponent } from './components/template-form/template-form.
     NgclassdemoComponent,
     ProductmasterComponent,
     TodosComponent,
-    TemplateFormComponent
+    TemplateFormComponent,
+    ReactiveFormComponent,
+    ParentOneComponent,
+    ChildOneComponent,
+    ParenttwoComponent,
+    ChildtwoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [TodoService],
   bootstrap: [AppComponent]
